@@ -1,10 +1,9 @@
-import fire from '../../assets/chubby-cute.gif'
+import Signin from "../../components/Landing/Signin/Signin";
 
 const Landing = () => {
   return (
     <>
-      <img src={fire} style={{ width: '150px' }} alt="" />
-      <h2>Arrancamos</h2>
+      <Signin/>
     </>
   );
 };
