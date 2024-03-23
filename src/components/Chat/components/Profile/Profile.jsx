@@ -10,7 +10,7 @@ export const Profile = ({ handleCloseOpenProfile }) => {
 
     return (
         <div className="w-full h-full">
-            <div className='flex items-center space-x-10 bg-[#282d8e] text-white pt-16 px-10 pb-5'>
+            <div className='flex items-center space-x-10 bg-[#161e46] text-white pt-16 px-10 pb-5'>
                 <BsArrowLeft className='cursor-pointer text-2xl font-bold' onClick={handleCloseOpenProfile} />
                 <p className='cursor-pointer font-semibold'> Profile</p>
             </div>
@@ -40,7 +40,7 @@ export const Profile = ({ handleCloseOpenProfile }) => {
                 }
             </div>
             <div className='px-3 my-5'>
-                <p className='py-10'>Este no es tu nombre de usuario</p>
+                <p className='py-10'>Lorem ipsum dolor sit.</p>
             </div>
         </div>
 
