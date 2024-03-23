@@ -35,7 +35,7 @@ export const HomePage = () => {
 
   return (
     <div className="relative">
-      <div className="w-full py-14 bg-[#444892]"></div>
+      <div className="w-full py-14 bg-[#2c3a8b]"></div>
       <div className="flex bg-[#f0f2f5] h-[90vh] absolute left-[2vw] top-[5vh] w-[96vw]">
         <div className="left w-[30%] bg-[#e8e8ec] h-full">
           {/* PERFIL   */}
