@@ -1,0 +1,42 @@
+@import '../../SCSS/abstracts/variables';
+
+@mixin flexbox($direction, $aligncontent, $justify, $alignitems){
+    display: flex;
+    flex-direction: $direction;
+    align-content: $aligncontent;
+    justify-content: $justify;
+    align-items: $alignitems;
+}
+
+@mixin primary-btn {
+    @include flexbox(row, center, center, center);
+    width: 150px; 
+    height: 40px;
+    background-color: $primary-color;
+    color: #ffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@mixin secundary-btn {
+    @include flexbox(row, center, center, center);
+    width: 150px; 
+    height: 40px;
+    background-color: $secundary-color;
+    color: #ffff;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@mixin third-btn {
+    @include flexbox(row, center, space-evenly, center);
+    width: 150px; 
+    height: 40px;
+    background-color: none; 
+    color: $secundary-color;
+    border: 1px solid $secundary-color;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

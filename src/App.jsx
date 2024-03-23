@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Chat } from './components/Chat/Chat';
-import './App.css'
+import './App.scss'
 import Landing from './Views/Landing/Landing'
 
 function App() {

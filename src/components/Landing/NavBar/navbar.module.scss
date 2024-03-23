@@ -1,0 +1,116 @@
+@use '../../../SCSS/abstracts/mixins' as *;
+@import '../../../SCSS/abstracts/variables';
+
+
+.wrapper {
+    @include flexbox(row, center,space-between, center);
+    height: 80px;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.brand {
+    @include flexbox(row, center, center,center);
+    gap: 0.5rem;
+}
+
+.menu {
+    @include flexbox(row, center, center,center);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin: 0 2rem;
+        color: $secundary-color; 
+    }
+    
+    a:hover {
+        color: #848484;
+    }
+}
+
+.h3 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+.span {
+    font-weight: bold;
+}
+
+.faBars {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.faTimes {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.signInBtn {
+    @include primary-btn;
+}
+
+.signInBtn:hover {
+    background-color: #34BDF1;
+}
+
+.signInBtn:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-15%);
+}
+
+@media only screen and (max-width: 1024px) {
+    .faBars {
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: black;
+        font-size: 1.8rem;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav {
+        display: none;
+
+        a {
+            color: #ffff;
+        }
+    }
+
+    .navResponsive {
+        @include flexbox(column, center,center, center);
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        gap: 1.5rem;
+        background-color: black;
+        transition: 1s;
+        transform: translateY(100vh);
+    }
+
+    .faTimes {
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+}
