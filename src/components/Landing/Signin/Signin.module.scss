@@ -1,0 +1,142 @@
+@use '../../../SCSS/abstracts/mixins' as *;
+@import '../../../SCSS/abstracts/variables';
+
+.wrapper {
+  @include flexbox(column, center, center, center);
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    font-size: 1.953rem;
+    color: $secundary-color;
+  }
+
+  form {
+    @include flexbox(column, center, center, center);
+    max-width: 350px;
+    margin: 0 auto;
+
+    input {
+      height: 40px;
+      width: 100%;
+      padding: 0px 15px;
+      color: black;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 10px;
+      transition: .2s;
+    }
+
+    input:focus {
+      outline: none;
+      border: 2px solid black;
+      transform: scale(1.02);
+    }
+
+    button {
+      @include secundary-btn;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background-color: #18266E;
+    }
+
+    button:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transform: translateY(-15%);
+    }
+
+  }
+}
+
+.containerBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  a {
+    background-color: white;
+    border: 1px solid $secundary-color;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  a:hover {
+    background-color: $grey3;
+  }
+
+  a:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-15%);
+  }
+}
+
+
+.showPassword {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../../assets/icons/iconEyeOpen.png');
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.hidePassword {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../../assets/icons/iconEyeClose.png');
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.inputWrapper {
+  width: 100%;
+  @include flexbox(column, center, center, flex-start);
+  margin-top: 10px;
+}
+
+.password {
+  position: relative;
+  display: flex;
+  width: 100%
+}
+
+.errorForm {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  color: red;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.containerTerminos {
+  @include flexbox(column, center, center, center);
+  width: 350px;
+
+  p {
+    text-align: center;
+    color: $grey1;
+  }
+
+  span {
+    font-weight: bold;
+    color: $secundary-color;
+  }
+}

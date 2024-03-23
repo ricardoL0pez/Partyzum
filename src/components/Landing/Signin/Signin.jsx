@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./Signin.module.css";
+import styles from "./Signin.module.scss";
 import { messages, patterns } from "./ValidationSignin";
+import google from "../../../assets/icons/google-icon.svg"
+import face from "../../../assets/icons/facebook-icon.svg"
 
 const Signin = () => {
     const {
         register,
         handleSubmit,
         formState: { errors }
-      } = useForm();
+    } = useForm();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -25,6 +27,7 @@ const Signin = () => {
 
             <h2>Registrate</h2>
             <p>Se parte de nuestra comunidad</p>
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* phone */}
                 <div className={styles.inputWrapper}>
@@ -35,11 +38,11 @@ const Signin = () => {
                             minLength: {
                                 value: 9,
                                 message: messages.lengthPhone
-                              },
-                              maxLength: {
+                            },
+                            maxLength: {
                                 value: 9,
                                 message: messages.lengthPhone
-                              },
+                            },
                             pattern: {
                                 value: patterns.phone,
                                 message: messages.phone
@@ -79,8 +82,8 @@ const Signin = () => {
                     {errors.fullName && <p className={styles.errorForm}>{errors.fullName.message}</p>}
                 </div>
                 {/* password */}
-                    <div className={styles.inputWrapper}>
-                        <div className={styles.password}>
+                <div className={styles.inputWrapper}>
+                    <div className={styles.password}>
                         <input
                             {...register("password", {
                                 required: messages.req,
@@ -99,27 +102,38 @@ const Signin = () => {
                             onClick={handleTogglePassword}
                             className={showPassword ? styles.hidePassword : styles.showPassword}
                         ></div>
-                        </div>
-                        
-                        <div>
-                            {errors.password && <p className={styles.errorForm}>{errors.password.message}</p>}
-                        </div>
-                        
                     </div>
+
+                    <div>
+                        {errors.password && <p className={styles.errorForm}>{errors.password.message}</p>}
+                    </div>
+
+                </div>
                 {/* </div> */}
+                
                 <br />
-                <button  className={styles.button} >
+
+                <button>
                     Registrate
                 </button>
             </form>
-            <p>O</p>
-            <button className={styles.button}>
-                Gmail
-            </button>
+
+            <p>O registarte con</p>
+
+            <div className={styles.containerBtn}>
+                <a href="" className={styles.btn}><img src={google} alt="" /></a>
+                <a href="" className={styles.btn}><img src={face} alt="" /></a>
+            </div>
+
             <br />
-            <p>Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span><div className=""></div></p>
-            <br />
-            <p>¿Ya estas registrado? <span className={styles.span}><a href="#">Inicia sesión</a></span></p>
+            <div className={styles.containerTerminos}>
+                <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span><div className=""></div></p>
+
+                <br />
+
+                <p >¿Ya estas registrado? <span className={styles.span}><a href="#">Inicia sesión</a></span></p>
+            </div>
+
 
         </div>
     );
