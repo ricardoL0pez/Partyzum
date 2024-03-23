@@ -1,0 +1,164 @@
+ .wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 80px;
+     padding: 0 2rem;
+     background-color: black;
+     color: white;
+ }
+
+ .brand {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+ }
+
+ .menu {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+ }
+
+
+ .h3 {
+     font-weight: lighter;
+     margin: 0;
+ }
+
+ .span {
+     font-weight: bold;
+ }
+
+ .a {
+     margin: 0 2rem;
+     color: white;
+     text-decoration: none;
+ }
+
+ .a:hover {
+     color: #848484;
+ }
+
+
+ .faBars {
+     visibility: hidden;
+     opacity: 0;
+ }
+
+ .faTimes {
+     visibility: hidden;
+     opacity: 0;
+ }
+
+ .nav {
+     display: flex;
+     align-items: center;
+ }
+
+
+ .logInBtn {
+     width: 100px;
+     height: 30px;
+     color: white;
+     text-align: center;
+     outline: none;
+     padding: 10px;
+     font-size: 14px;
+     letter-spacing: 1px;
+     border: none;
+     background-color: black;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+ }
+
+ .signInBtn {
+     width: 120px;
+     height: 30px;
+     color: black;
+     text-align: center;
+     outline: none;
+     padding: 10px;
+     font-size: 14px;
+     letter-spacing: 1px;
+     border: none;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+ }
+
+ .signInBtn:hover {
+     color: white;
+     background-color: rgb(0, 0, 0);
+     border: 1px solid rgb(255, 255, 255);
+ }
+
+ .logInBtn:hover {
+     font-weight: bold;
+ }
+
+
+ @media only screen and (max-width: 1024px) {
+     .faBars {
+         padding: 5px;
+         cursor: pointer;
+         background: transparent;
+         border: none;
+         outline: none;
+         color: white;
+         font-size: 1.8rem;
+         visibility: visible;
+         opacity: 1;
+     }
+
+     .nav {
+         display: none;
+     }
+
+     .navResponsive {
+         position: fixed;
+         top: -100vh;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 1.5rem;
+         background-color: black;
+         transition: 1s;
+         transform: translateY(100vh);
+     }
+
+     .faTimes {
+         padding: 5px;
+         cursor: pointer;
+         background: transparent;
+         border: none;
+         outline: none;
+         color: white;
+         font-size: 1.8rem;
+         position: absolute;
+         top: 2rem;
+         right: 2rem;
+         visibility: visible;
+         opacity: 1;
+     }
+
+     .signInBtn,
+     .a,
+     .logInBtn {
+         font-size: 1.5rem;
+     }
+
+     .signInBtn{
+        width: 120px;
+     height: 35px;
+     padding: 10px;
+            }
+ }
