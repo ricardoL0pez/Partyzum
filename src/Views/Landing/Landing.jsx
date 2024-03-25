@@ -41,7 +41,7 @@ const Landing = () => {
                     <h2>Contacto</h2>
                     <div>
                     <p>info@partyzum.com</p>
-                    <p>+34 600 0000</p>
+                    <p> Phone: +34 600 0000</p>
                     </div>
                     
                 </div>
