@@ -7,7 +7,7 @@
   padding: 0;
 
   h3 {
-    
+
     color: $secundary-color;
   }
 
@@ -109,6 +109,14 @@
   width: 100%;
   @include flexbox(column, center, center, flex-start);
   margin-top: 10px;
+
+  .successInput {
+    color: green; 
+  }
+
+  .errorInput {
+    border-color: red; 
+  }
 }
 
 .password {

@@ -3,6 +3,8 @@ import styles from './landing.module.scss';
 import NavBar from "../../components/Landing/NavBar/NavBar";
 import Signin from "../../components/Landing/Signin/Signin";
 import Slider from '../../components/Landing/Slider/Slider';
+import CallToAction from '../../components/Landing/CTA/CallToAction';
+import Contact from '../../components/Landing/Contact/Contact';
 
 const Landing = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +32,25 @@ const Landing = () => {
 
             {/* characteristics section slider */}
             <Slider />
+
+            <CallToAction />
+{/* contact section */}
+            <section className={styles.contact_section}>
+
+                <div className={styles.flex_item1}>
+                    <h2>Contacto</h2>
+                    <div>
+                    <p>info@partyzum.com</p>
+                    <p>+34 600 0000</p>
+                    </div>
+                    
+                </div>
+
+                <div className={styles.flex_item2}>
+                    <Contact />
+                </div>
+            </section>
+
         </>
     );
 };

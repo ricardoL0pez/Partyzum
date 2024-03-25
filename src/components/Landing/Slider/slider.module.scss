@@ -8,7 +8,9 @@
     width: 100vw; /* Ocupa el ancho total de la página */
     @include flexbox(row, center, center, center);
     background-color: $third-color;
-    margin-top: 40px;    
+    margin-top: 40px; 
+    margin-bottom: 40px;
+    
 }
 
 .slides {
@@ -16,7 +18,7 @@
     transition: transform 0.5s ease-in-out;
     width: 80vw;
     background-color: $third-color;
-    gap: 50px
+    gap: 50px;
 }
 
 .characteristics_wrapper {
@@ -77,6 +79,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    margin-bottom: 40px   
 }
 
 .slideControl {
@@ -84,18 +87,18 @@
     height: 10px;
     border-radius: 50%;
     /* background-color: $slider-control-color; */
-    background-color: red;
+    background-color: $grey1;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
        /*  background-color: $slider-control-hover-color; */
-        background-color: blue;
+        background-color: $grey2;
     }
 }
 
 .active {
     /* background-color: $slider-control-active-color; */
-    background-color: green;
+    background-color: $primary-color;
 }
