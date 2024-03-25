@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./Signin.module.scss";
-import { messages, patterns } from "./ValidationSignin";
+import styles from "./signin.module.scss";
+import { messages, patterns } from "./validation";
 import google from "../../../assets/icons/google-icon.svg"
 import face from "../../../assets/icons/facebook-icon.svg"
 
@@ -25,7 +25,7 @@ const Signin = () => {
     return (
         <div className={styles.wrapper}>
 
-            <h2>Registrate</h2>
+            <h3>Registrate</h3>
             <p>Se parte de nuestra comunidad</p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -55,7 +55,7 @@ const Signin = () => {
                         aria-label="Número de teléfono"
                         aria-required="true"
                         defaultValue="+34"
-                        className={styles.input}
+                        className={`${styles.input} ${errors.phone ? styles.errorInput : styles.successInput}`} 
                     />
                     {errors.phone && <p className={styles.errorForm}>{errors.phone.message}</p>}
                 </div>
@@ -77,7 +77,7 @@ const Signin = () => {
                         aria-label="Nombre completo"
                         aria-required="true"
                         autoCapitalize="off"
-                        className={styles.input}
+                        className={`${styles.input} ${errors.fullName ? styles.errorInput : styles.successInput}`} 
                     />
                     {errors.fullName && <p className={styles.errorForm}>{errors.fullName.message}</p>}
                 </div>
@@ -96,7 +96,7 @@ const Signin = () => {
                             name="password"
                             type={showPassword ? "text" : "password"}
                             placeholder="Constraseña"
-                            className={styles.input}
+                            className={`${styles.input} ${errors.password ? styles.errorInput : styles.successInput}`} 
                         />
                         <div
                             onClick={handleTogglePassword}
@@ -109,7 +109,7 @@ const Signin = () => {
                     </div>
 
                 </div>
-                {/* </div> */}
+                
                 
                 <br />
 

@@ -1,0 +1,104 @@
+// slider.module.scss
+@use '../../../SCSS/abstracts/mixins' as *;
+@import '../../../SCSS/abstracts/variables';
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw; /* Ocupa el ancho total de la página */
+    @include flexbox(row, center, center, center);
+    background-color: $third-color;
+    margin-top: 40px; 
+    margin-bottom: 40px;
+    
+}
+
+.slides {
+    @include flexbox(row, center, flex-start, center);
+    transition: transform 0.5s ease-in-out;
+    width: 80vw;
+    background-color: $third-color;
+    gap: 50px;
+}
+
+.characteristics_wrapper {
+    @include flexbox(row, center, center, center);
+    width: 80vw;  
+    height: 100vh; 
+    
+    
+
+    .textContainer, .video {
+        @include flexbox(column, center, space-evenly, flex-start);
+        width: 50%; 
+    }
+
+    .p {
+        @include p-regular(400);
+    }
+}
+
+/* .prevButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+ */
+
+ .prevButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+.sliderControls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin-bottom: 40px   
+}
+
+.slideControl {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* background-color: $slider-control-color; */
+    background-color: $grey1;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+       /*  background-color: $slider-control-hover-color; */
+        background-color: $grey2;
+    }
+}
+
+.active {
+    /* background-color: $slider-control-active-color; */
+    background-color: $primary-color;
+}
