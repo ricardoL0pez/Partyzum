@@ -25,7 +25,7 @@ const Signin = () => {
     return (
         <div className={styles.wrapper}>
 
-            <h2>Registrate</h2>
+            <h3>Registrate</h3>
             <p>Se parte de nuestra comunidad</p>
 
             <form onSubmit={handleSubmit(onSubmit)}>

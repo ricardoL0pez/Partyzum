@@ -1,7 +1,7 @@
 @use '../../SCSS/abstracts/mixins' as *;
 @import '../../SCSS/abstracts/variables';
 
-.heroContainer {
+.hero_wrapper {
     @include flexbox(row, center, center, center);
     background-color: $third-color;
     padding: 0;
@@ -18,10 +18,7 @@
             font-size: 3.052rem;
             font-weight: 800;
             line-height: 1;
-            background: linear-gradient(0deg, $primary-color, $secundary-color);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
+            @include degradado;
         }
 
         p {
@@ -46,5 +43,61 @@
 }
 
 .hide {
-    display: none; 
-  }
+    display: none;
+}
+
+h4 {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .heroContainer .textContainer {
+        display: none;
+    }
+
+    .signin {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        h4 {
+            @include degradado;
+            display: visible;
+        }
+    }
+
+
+}
+
+.characteristics_wrapper {
+    @include flexbox(row, center, center, center);
+    background-color: $third-color;
+    padding: 0;
+    height: 100vh;
+
+
+    margin-top: 40px;
+    padding: 20px;
+    background-color: $third-color;
+
+    div {
+        @include flexbox(column, center, space-evenly, flex-start);
+        width: 50%;
+        height: 60%;
+        margin-left: 100px;
+
+        .p {
+            @include p-regular (400);
+        }
+    }
+}
+
+
+
+
+
+
+
