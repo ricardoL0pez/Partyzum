@@ -7,6 +7,14 @@
     margin: 20px;
     padding: 0;
 
+    img {
+        position: absolute;
+        width: 80%;
+        object-fit: cover;
+        pointer-events: none;
+        
+    }
+
     p{
         width: 50%; 
         margin-top: 2.5%;

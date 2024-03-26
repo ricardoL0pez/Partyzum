@@ -1,44 +1,78 @@
 @use '../../SCSS/abstracts/mixins' as *;
 @import '../../SCSS/abstracts/variables';
 
+
+.backSection {
+    /* position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; */
+    
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; 
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.backSection::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
+.backSection {
+    img {
+        position: absolute;
+        width: 60%;
+        object-fit: cover;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+    }
+    .thunder { 
+        width: 30px;
+        left: 50px;
+    }
+    .donut { 
+        width: 30px;
+        left: 55%;
+        top:30%;
+        opacity: 1; /* Aseguramos que la opacidad inicial sea 1 */
+    transition: opacity 0.5s ease; /* Agregamos una transición para la opacidad */
+    }
+    .rocket{
+        width: 30px;
+        left: 10%;
+        bottom: 0;
+    }
+}
+
 .hero_wrapper {
-    @include flexbox(row, center, center, center);
-    background-color: $third-color;
-    padding: 0;
+    @include flexbox(row, center, center, flex-start);
+    margin-top: 0;
+    
+    padding: 20px 0;
     height: 100vh;
 
-
-    .textContainer {
-        @include flexbox(column, center, space-evenly, flex-start);
-        width: 50%;
-        height: 70%;
-        margin-left: 100px;
-
-        h1 {
-            font-size: 3.052rem;
-            font-weight: 800;
-            line-height: 1;
-            @include degradado;
-        }
-
-        p {
-            font-size: 1.25rem;
-            color: $grey1;
-            width: 80%;
-        }
-
-        button {
-            @include primary-btn;
-        }
-
-        button:hover {
-            background-color: #34BDF1;
-        }
-
-        button:active {
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            transform: translateY(-15%);
-        }
+    .signin {
+        height: 100%;
     }
 }
 
@@ -46,14 +80,12 @@
     display: none;
 }
 
-h4 {
+.hh4 {
     display: none;
 }
 
 @media only screen and (max-width: 900px) {
-    .heroContainer .textContainer {
-        display: none;
-    }
+    
 
     .signin {
         width: 100%;
@@ -68,7 +100,6 @@ h4 {
             display: visible;
         }
     }
-
 
 }
 
@@ -95,31 +126,36 @@ h4 {
     }
 }
 
-
-
 /* contact section */
 .contact_section {
     @include flexbox(row, center, center, center);
-    background-color: rgb(68, 152, 57);
-    height: 100vh;
+    height: 80vh;
     width: 100%;
+    background-color: $grey3;
 
-    .flex_item1 {
-        @include flexbox(column, center, flex-start, flex-start);
+    .contact_info {
+        @include flexbox(column, center, flex-start, center);
         height: 80%;
         width: 50%;
-        margin: 10px 20px;
-        padding: 20px;
-        gap:80px;
-         background-color: aqua; 
+        margin: 0px 20px;
+        padding: 10px;
+        gap: 80px;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+
 
     }
 
-    .flex_item2 {
+    .contact_form {
         @include flexbox(row, center, center, center);
         height: 100px;
         width: 50%;
-        background-color: blue;
+
     }
 }
 

@@ -125,11 +125,11 @@ const Signin = () => {
                 <a href="" className={styles.btn}><img src={face} alt="" /></a>
             </div>
 
-            <br />
+            
             <div className={styles.containerTerminos}>
                 <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span><div className=""></div></p>
 
-                <br />
+               
 
                 <p >¿Ya estas registrado? <span className={styles.span}><a href="#">Inicia sesión</a></span></p>
             </div>

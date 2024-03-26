@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from './navbar.module.scss';
+import logo from '../../../assets/icons/logo.png'
+
 
 const NavBar = ({ onMenuToggle }) => {
     const [showMenu, setShowMenu] = useState(false);
@@ -13,7 +15,7 @@ const NavBar = ({ onMenuToggle }) => {
         <header className={styles.wrapper}>
 
             <div className={styles.brand}>
-                <h3 className={styles.h3}>NavBar <span className={styles.span}>CSS Modules</span></h3>
+                <img src={logo} alt="" />
             </div>
 
             <div className={styles.menu}>

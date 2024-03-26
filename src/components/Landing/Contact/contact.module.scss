@@ -5,58 +5,59 @@
    @include flexbox(column, center, center, center); 
     margin: 20px;
     padding: 0;
-    background-color: rgb(242, 255, 0);
     width: 100%;
 
     img {
         width: 200px;
     }
+
+    form {
+        @include flexbox(column, center, center, flex-start);
+        margin: 0;
+        padding: 0;
+        width: 80%;
+    
+            label {
+                color: $grey1;
+                padding-left: 30px;
+                margin-top: 20px;
+            }
+    
+            input {
+                height: 40px;
+                width: 100%;
+                margin: 0 20px;
+                padding: 0px 10px;
+                color: black;
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-radius: 10px;
+                transition: .2s;
+            }
+    
+            input:focus {
+                outline: none;
+                border: 2px solid black;
+                transform: scale(1.02);
+            }
+    
+            input[id="message"] {
+                height: 100px;
+    
+            }
+    
+            .successInput {
+                color: green;
+            }
+    
+            .errorInput {
+                border-color: red;
+            }
+    
+        }
 }
 
-form {
-    @include flexbox(column, center, center, flex-start);
-    margin: 0;
-    padding: 0;
-    width: 80%;
 
-        label {
-            color: $grey1;
-            padding-left: 30px;
-            margin-top: 20px;
-        }
-
-        input {
-            height: 40px;
-            width: 100%;
-            margin: 0 20px;
-            padding: 0px 10px;
-            color: black;
-            box-sizing: border-box;
-            border: 2px solid black;
-            border-radius: 10px;
-            transition: .2s;
-        }
-
-        input:focus {
-            outline: none;
-            border: 2px solid black;
-            transform: scale(1.02);
-        }
-
-        input[id="message"] {
-            height: 100px;
-
-        }
-
-        .successInput {
-            color: green;
-        }
-
-        .errorInput {
-            border-color: red;
-        }
-
-    }
 
     .btn_send {
         @include flexbox(row, center, flex-end, center);

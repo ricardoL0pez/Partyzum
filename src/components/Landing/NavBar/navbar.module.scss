@@ -10,8 +10,8 @@
 }
 
 .brand {
-    @include flexbox(row, center, center,center);
-    gap: 0.5rem;
+    width: 200px;
+    margin-left: 150px
 }
 
 .menu {

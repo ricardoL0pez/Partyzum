@@ -3,7 +3,7 @@
 
 .wrapper {
   @include flexbox(column, center, center, center);
-  margin: 0;
+  margin-top: 0;
   padding: 0;
 
   h3 {
@@ -127,7 +127,7 @@
 .errorForm {
   margin-top: 5px;
   margin-bottom: 0;
-  padding-left: 20px;
+  padding-left: 10px;
   color: red;
   font-size: 0.8em;
   text-align: left;
@@ -140,6 +140,7 @@
   p {
     text-align: center;
     color: $grey1;
+    margin-top: 10px;
   }
 
   span {
