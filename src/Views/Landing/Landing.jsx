@@ -1,13 +1,49 @@
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import styles from './landing.module.scss';
+import { HiOutlineMail, HiOutlineMailOpen, HiOutlinePhone, HiPhone } from "react-icons/hi";
 import NavBar from "../../components/Landing/NavBar/NavBar";
+import TextHero from '../../components/Landing/TextHero/TextHero';
 import Signin from "../../components/Landing/Signin/Signin";
 import Slider from '../../components/Landing/Slider/Slider';
 import CallToAction from '../../components/Landing/CTA/CallToAction';
 import Contact from '../../components/Landing/Contact/Contact';
+import Footer from '../../components/Landing/Footer/Footer';
+import circles from '../../assets/image/circles.svg';
+import thunder from '../../assets/image/thunder.svg';
+import donut from '../../assets/image/donut.svg';
+import rocket from '../../assets/image/rocket.svg';
+
 
 const Landing = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [iconHovered, setIconHovered] = useState(false);
+    const [iconHoveredPhone, setIconHoveredPhone] = useState(false);
+
+    const circlesRef = useRef(null);
+    const thunderRef = useRef(null);
+    const donutRef = useRef(null);
+    const rocketRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const value = window.scrollY;
+            const rotation = value / (window.innerHeight / 90);
+            circlesRef.current.style.transform = `rotate(${rotation}deg)`;
+            thunderRef.current.style.top = `${value * 1.05}px`;
+            donutRef.current.style.transform = `scale(${1 + value / 3000})`;
+            donutRef.current.style.transform = `rotate(${rotation}deg)`;
+            donutRef.current.style.opacity = `${1 - (value / 1000)}`; 
+            rocketRef.current.style.transform = `scale(${1 - value / 1000})`;
+            rocketRef.current.style.bottom = `${value * -10.05}px`;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const handleMenuToggle = (menuState) => {
         setIsMenuOpen(menuState); // Actualizar el estado del menú
@@ -16,16 +52,18 @@ const Landing = () => {
     return (
         <>
             <NavBar onMenuToggle={handleMenuToggle} />
+
+            <section className={styles.backSection}>
+                <img className={styles.circle} src={circles} alt="circles" ref={circlesRef} />
+                <img className={styles.thunder} src={thunder} alt="thunder" ref={thunderRef} />
+                <img className={styles.donut} src={donut} alt="donut" ref={donutRef} />
+                {/* <img className={styles.rocket} src={rocket} alt="rocket" ref={rocketRef} /> */}
+            </section>
+
             {/* hero section */}
             <section className={styles.hero_wrapper}>
-                {/* <div className={`${styles.textContainer} ${isMenuOpen ? styles.hide : ''}`}> */}
-                <div className={styles.textContainer}>
-                    <h1>¡Convierte tus Conversaciones en Acciones!</h1>
-                    <p>Descubre nuestra innovadora aplicación de mensajería con pagos integrados a través de Bizum. Organiza reuniones, fiestas y más, todo mientras realizas transacciones seguras en un solo lugar.</p>
-                    <button className={styles.button}>Inicia sesión</button>
-                </div>
-                <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
-                    <h4>¡Convierte tus Conversaciones en Acciones!</h4>
+                <TextHero />
+                <div className={styles.signin}>
                     <Signin />
                 </div>
             </section>
@@ -34,22 +72,41 @@ const Landing = () => {
             <Slider />
 
             <CallToAction />
-{/* contact section */}
+            {/* contact section */}
             <section className={styles.contact_section}>
 
-                <div className={styles.flex_item1}>
+                <div className={styles.contact_info}>
                     <h2>Contacto</h2>
+
                     <div>
-                    <p>info@partyzum.com</p>
-                    <p> Phone: +34 600 0000</p>
+                        {iconHovered ? <HiOutlineMailOpen /> : <HiOutlineMail />}
+                        <a
+                            href="#"
+                            onMouseEnter={() => setIconHovered(true)}
+                            onMouseLeave={() => setIconHovered(false)}
+                        >
+                            info@partyzum.com
+                        </a>
                     </div>
-                    
+
+                    <div>
+                        {iconHoveredPhone ? <HiPhone /> : <HiOutlinePhone />}
+                        <a
+                            href="#"
+                            onMouseEnter={() => setIconHoveredPhone(true)}
+                            onMouseLeave={() => setIconHoveredPhone(false)}
+                        >
+                            +34 600 0000
+                        </a>
+                    </div>
                 </div>
 
-                <div className={styles.flex_item2}>
+                <div className={styles.contact_form}>
                     <Contact />
                 </div>
             </section>
+            <Footer />
+
 
         </>
     );

@@ -1,0 +1,61 @@
+@use '../../../SCSS/abstracts/mixins' as *;
+@import '../../../SCSS/abstracts/variables';
+
+.footerWrapper {
+    @include flexbox(row, center, space-around, center);
+    height: 350px;
+    background-color: $secundary-color;
+    text-align: left;
+    color: white
+}
+
+.footerMenuContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 20px;
+        
+        text-decoration: none;
+    }
+
+    .a, p {
+
+        margin-top: 0;
+    }
+
+    a:hover{
+color: $primary-color    }
+}
+
+.footerRedesContainer {
+    @include flexbox(column, center, null, left);
+
+    p {
+        margin: 0 0 10px 0;
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
+
+    img {
+        background-color: white;
+        border-radius: 5px;
+        padding: 2px;
+        width: 35px;
+        transition: transform 0.3s ease; 
+    }
+
+    img:hover{
+        transform: scale(1.2); 
+    } 
+}
