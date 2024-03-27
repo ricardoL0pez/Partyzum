@@ -2,8 +2,8 @@
 @import '../../../SCSS/abstracts/variables';
 
 .wrapper {
-  @include flexbox(column, center, center, center);
-  margin-top: 0;
+  @include flexbox(column, center, flex-start, center);
+  margin: 50px 100px 20px 100px;
   padding: 0;
 
   h3 {
@@ -15,21 +15,35 @@
     max-width: 350px;
     margin: 0 auto;
 
-    input {
-      height: 40px;
+    .inputWrapper {
       width: 100%;
-      padding: 0px 15px;
-      color: black;
-      box-sizing: border-box;
-      border: 2px solid black;
-      border-radius: 10px;
-      transition: .2s;
-    }
+      @include flexbox(column, center, center, flex-start);
+      margin-top: 10px;
+    
+      .input {
+        height: 40px;
+        width: 100%;
+        padding: 0px 15px;
+        color: black;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 10px;
+        transition: .2s;
+      }
+  
+      .input:focus {
+        outline: none;
+        border: 2px solid black;
+        transform: scale(1.02);
+      }
 
-    input:focus {
-      outline: none;
-      border: 2px solid black;
-      transform: scale(1.02);
+      .successInput {
+        color: green;
+      }
+    
+      .errorInput {
+        border-color: red;
+      }
     }
 
     button {
@@ -104,20 +118,6 @@
   cursor: pointer;
 }
 
-.inputWrapper {
-  width: 100%;
-  @include flexbox(column, center, center, flex-start);
-  margin-top: 10px;
-
-  .successInput {
-    color: green; 
-  }
-
-  .errorInput {
-    border-color: red; 
-  }
-}
-
 .password {
   position: relative;
   display: flex;
@@ -146,5 +146,13 @@
   span {
     font-weight: bold;
     color: $secundary-color;
+
+    a:hover {
+      color: $grey2;
+    }
+
+    a:active {
+      color: $primary-color;
+    }
   }
 }

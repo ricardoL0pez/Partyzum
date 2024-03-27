@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from './navbar.module.scss';
 import logo from '../../../assets/icons/logo.png'
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 
 const NavBar = ({ onMenuToggle }) => {
@@ -15,13 +15,13 @@ const NavBar = ({ onMenuToggle }) => {
         <header className={styles.wrapper}>
 
             <div className={styles.brand}>
-                <img src={logo} alt="" />
+                <img src={logo} alt="logo partyzumm" />
             </div>
 
             <div className={styles.menu}>
-                
+
                 <nav className={`${styles.nav} ${showMenu ? styles.navResponsive : ''}`}>
-                
+
                     <a href="/#">¿Cómo funciona?</a>
                     <a href="/#">Contacto</a>
                     <button className={styles.signInBtn}>Inicia sesión</button>
