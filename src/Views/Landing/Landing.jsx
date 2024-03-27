@@ -51,7 +51,10 @@ const Landing = () => {
 
     return (
         <>
-            <NavBar onMenuToggle={handleMenuToggle} />
+            <NavBar onMenuToggle={handleMenuToggle}/>
+
+
+
 
             <section className={styles.backSection}>
                 <img className={styles.circle} src={circles} alt="circles" ref={circlesRef} />
@@ -61,13 +64,14 @@ const Landing = () => {
             </section>
 
             {/* hero section */}
-            <section className={styles.hero_wrapper}>
+            <section className={styles.hero_section}>
                 <TextHero />
                 <div className={styles.signin}>
-                    <Signin />
+                <Signin />
+                    
                 </div>
             </section>
-
+        
             {/* characteristics section slider */}
             <Slider />
 
@@ -104,6 +108,7 @@ const Landing = () => {
                 <div className={styles.contact_form}>
                     <Contact />
                 </div>
+                
             </section>
             <Footer />
 

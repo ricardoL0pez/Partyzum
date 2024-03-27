@@ -3,16 +3,6 @@
 
 
 .backSection {
-    /* position: relative;
-    width: 100%;
-    height: 100vh;
-    
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -26,6 +16,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    
 }
 
 .backSection::before {
@@ -64,16 +55,11 @@
     }
 }
 
-.hero_wrapper {
+.hero_section {
     @include flexbox(row, center, center, flex-start);
-    margin-top: 0;
-    
-    padding: 20px 0;
-    height: 100vh;
-
-    .signin {
-        height: 100%;
-    }
+    margin: 0;
+    padding: 0;
+    height: 100%; /* mandatory */  
 }
 
 .hide {
@@ -108,6 +94,7 @@
     background-color: $third-color;
     padding: 0;
     height: 100vh;
+    
 
 
     margin-top: 40px;
@@ -128,18 +115,26 @@
 
 /* contact section */
 .contact_section {
-    @include flexbox(row, center, center, center);
+   /*  @include flexbox(row, center, center, center);
     height: 80vh;
     width: 100%;
+    background-color: $grey3; */
+
+    @include flexbox(row, center, center, center);
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* mandatory */  
     background-color: $grey3;
 
     .contact_info {
-        @include flexbox(column, center, flex-start, center);
+        /* @include flexbox(column, center, flex-start, center);
         height: 80%;
         width: 50%;
         margin: 0px 20px;
         padding: 10px;
-        gap: 80px;
+        gap: 80px; */
+        @include flexbox(column, center, flex-start, flex-start);
+        margin: 50px 100px 0px 100px;
 
         div {
             display: flex;
