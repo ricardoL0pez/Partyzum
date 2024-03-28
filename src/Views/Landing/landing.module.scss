@@ -2,6 +2,7 @@
 @import '../../SCSS/abstracts/variables';
 
 
+
 .backSection {
     position: fixed;
     width: 100%;
@@ -60,34 +61,16 @@
     margin: 0;
     padding: 0;
     height: 100%; /* mandatory */  
+
+    h4{
+        display: none;
+    }
 }
 
 .hide {
     display: none;
 }
 
-.hh4 {
-    display: none;
-}
-
-@media only screen and (max-width: 900px) {
-    
-
-    .signin {
-        width: 100%;
-        margin-top: 0;
-        padding-top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-
-        h4 {
-            @include degradado;
-            display: visible;
-        }
-    }
-
-}
 
 .characteristics_wrapper {
     @include flexbox(row, center, center, center);
@@ -95,8 +78,6 @@
     padding: 0;
     height: 100vh;
     
-
-
     margin-top: 40px;
     padding: 20px;
     background-color: $third-color;
@@ -115,10 +96,6 @@
 
 /* contact section */
 .contact_section {
-   /*  @include flexbox(row, center, center, center);
-    height: 80vh;
-    width: 100%;
-    background-color: $grey3; */
 
     @include flexbox(row, center, center, center);
     margin: 0;
@@ -127,12 +104,7 @@
     background-color: $grey3;
 
     .contact_info {
-        /* @include flexbox(column, center, flex-start, center);
-        height: 80%;
-        width: 50%;
-        margin: 0px 20px;
-        padding: 10px;
-        gap: 80px; */
+       
         @include flexbox(column, center, flex-start, flex-start);
         margin: 50px 100px 0px 100px;
 
@@ -155,14 +127,53 @@
 }
 
 
+@media screen and (max-width: 600px) {
 
+    @media screen and (max-width: 600px) {
+        
+        .backSection,
+        .characteristics_section,
+        .callToAction_section,
+        .contact_section,
+        .footer_section {
+           
+          display: none;
+        }
+      }
+      .hero_section{
+        
+          .signin{
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
 
+            h4{
+                @include degradado;
+                margin-top: 20px;
+                text-align: center;
+                display: visible;
+            }
+        }
+      }
 
-
-
-@media screen and (max-width: 768px) {
-    .flex-item {
-        width: calc(100% - 20px);
-
-    }
 }
+
+
+
+/* @media only screen and (max-width: 900px) {
+    
+    .signin {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        h4 {
+            @include degradado;
+            display: visible;
+        }
+    }
+
+} */

@@ -17,6 +17,7 @@ import rocket from '../../assets/image/rocket.svg';
 
 const Landing = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const [iconHovered, setIconHovered] = useState(false);
     const [iconHoveredPhone, setIconHoveredPhone] = useState(false);
 
@@ -33,7 +34,7 @@ const Landing = () => {
             thunderRef.current.style.top = `${value * 1.05}px`;
             donutRef.current.style.transform = `scale(${1 + value / 3000})`;
             donutRef.current.style.transform = `rotate(${rotation}deg)`;
-            donutRef.current.style.opacity = `${1 - (value / 1000)}`; 
+            donutRef.current.style.opacity = `${1 - (value / 1000)}`;
             rocketRef.current.style.transform = `scale(${1 - value / 1000})`;
             rocketRef.current.style.bottom = `${value * -10.05}px`;
         };
@@ -47,14 +48,12 @@ const Landing = () => {
 
     const handleMenuToggle = (menuState) => {
         setIsMenuOpen(menuState); // Actualizar el estado del menú
+        setShowMenu(menuState);
     }
 
     return (
         <>
-            <NavBar onMenuToggle={handleMenuToggle}/>
-
-
-
+            <NavBar onMenuToggle={handleMenuToggle} showMenu={showMenu}/>
 
             <section className={styles.backSection}>
                 <img className={styles.circle} src={circles} alt="circles" ref={circlesRef} />
@@ -64,18 +63,34 @@ const Landing = () => {
             </section>
 
             {/* hero section */}
-            <section className={styles.hero_section}>
-                <TextHero />
-                <div className={styles.signin}>
-                <Signin />
+            <section className={`${styles.hero_section} ${showMenu ? styles.hide : ''}`}>
+                
+          
+            <TextHero />
+                
+
+                
+
+                <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
+                    <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
                     
+                    <Signin />
                 </div>
             </section>
-        
-            {/* characteristics section slider */}
-            <Slider />
 
-            <CallToAction />
+
+
+
+
+            {/* characteristics section slider */}
+            <div className={styles.characteristics_section}>
+                <Slider />
+            </div>
+
+            <div className={styles.callToAction_section}>
+                <CallToAction />
+            </div>
+
             {/* contact section */}
             <section className={styles.contact_section}>
 
@@ -108,9 +123,13 @@ const Landing = () => {
                 <div className={styles.contact_form}>
                     <Contact />
                 </div>
-                
+
             </section>
-            <Footer />
+
+            <div className={styles.footer_section}>
+                <Footer />
+            </div>
+
 
 
         </>
