@@ -19,6 +19,7 @@ const Contact = () => {
     return (
         <div className={styles.wrapper}>
              <img src={logo} alt="" /> 
+            <h4>Comunicate con nosotros</h4>
             
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* mail */}

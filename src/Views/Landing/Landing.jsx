@@ -67,11 +67,6 @@ const Landing = () => {
 
                 <TextHero />
 
-                {/* <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
-                    <h4 className={styles.h4}>¡Convierte tus Conversaciones <br />en Acciones!</h4>
-                    <Signin />
-                </div>  */}
-
                 <div className={styles.signin}>
                     <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
 
@@ -85,11 +80,11 @@ const Landing = () => {
 
 
             {/* characteristics section slider */}
-            <div id="characteristics" className={styles.characteristics_section}>
+            <div id="characteristics" className={`${styles.characteristics_section} ${showMenu ? styles.hide : ''}`}>
                 <Slider />
             </div>
 
-            <div className={styles.callToAction_section}>
+            <div className={`${styles.callToAction_section} ${showMenu ? styles.hide : ''}`}>
                 <CallToAction />
             </div>
 

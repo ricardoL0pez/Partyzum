@@ -2,16 +2,16 @@
 @import '../../../SCSS/abstracts/variables';
 
 .wrapper {
-   /* @include flexbox(column, center, center, center); 
-    margin: 20px;
-    padding: 0;
-    width: 100%; */
-
-    @include flexbox(column, center, center, center);
+   @include flexbox(column, center, center, center);
     margin: 50px 100px 20px 100px;
     padding: 0;
     width: 100%;
 
+    h4{
+        color: $grey1;
+        margin-top: 20px;
+        display: none;
+    }
     img {
         width: 200px;
     }
@@ -91,4 +91,15 @@
     color: red;
     font-size: 0.8em;
     text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper{
+
+        margin: 0px 10px ;
+
+        h4{
+            display: block; 
+        }
+    }
 }
