@@ -5,7 +5,7 @@ const DashBoardAdmin = () => {
                 Ciao! Sono Dashboard Admin
                 
             </h2>
-            <a href="/">Volver al Home</a>
+            <a href="/">Volver para volver al Home</a>
         </>
     );
 };
