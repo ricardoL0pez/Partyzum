@@ -28,7 +28,7 @@ const Slider = () => {
                 <section className={styles.characteristics_wrapper}>
                     <div className={styles.textContainer}>
                         <h2>Sección <br />características</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
+                        <br /><p className={styles.pp}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
                         <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem.</p>
                     </div>
                     <div className={styles.video}>
@@ -41,7 +41,7 @@ const Slider = () => {
                 <section className={styles.characteristics_wrapper}>
                     <div className={styles.textContainer}>
                         <h2>Sección <br />características</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
+                        <br /><p className={styles.pp}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
                         <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem.</p>
                     </div>
                     <div className={styles.video}>
@@ -54,7 +54,7 @@ const Slider = () => {
                 <section className={styles.characteristics_wrapper}>
                     <div className={styles.textContainer}>
                         <h2>Sección <br />características</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
+                        <br /><p className={styles.pp}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem, repellat accusamus repudiandae minus. Odio unde cum, error harum exercitationem porro?</p>
                         <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptates debitis, magni iste quis vitae doloremque et deserunt rem.</p>
                     </div>
                     <div className={styles.video}>

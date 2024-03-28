@@ -2,11 +2,12 @@
 @import '../../SCSS/abstracts/variables';
 
 
+
 .backSection {
     position: fixed;
     width: 100%;
     height: 100vh;
-    z-index: -1; 
+    z-index: -1;
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    
+
 }
 
 .backSection::before {
@@ -37,18 +38,23 @@
         top: 0;
         left: 0;
     }
-    .thunder { 
+
+    .thunder {
         width: 30px;
         left: 50px;
     }
-    .donut { 
+
+    .donut {
         width: 30px;
         left: 55%;
-        top:30%;
-        opacity: 1; /* Aseguramos que la opacidad inicial sea 1 */
-    transition: opacity 0.5s ease; /* Agregamos una transición para la opacidad */
+        top: 30%;
+        opacity: 1;
+        /* Aseguramos que la opacidad inicial sea 1 */
+        transition: opacity 0.5s ease;
+        /* Agregamos una transición para la opacidad */
     }
-    .rocket{
+
+    .rocket {
         width: 30px;
         left: 10%;
         bottom: 0;
@@ -59,43 +65,24 @@
     @include flexbox(row, center, center, flex-start);
     margin: 0;
     padding: 0;
-    height: 100%; /* mandatory */  
+    height: 100%;
+    /* mandatory */
+
+    h4 {
+        display: none;
+    }
 }
 
 .hide {
     display: none;
 }
 
-.hh4 {
-    display: none;
-}
-
-@media only screen and (max-width: 900px) {
-    
-
-    .signin {
-        width: 100%;
-        margin-top: 0;
-        padding-top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-
-        h4 {
-            @include degradado;
-            display: visible;
-        }
-    }
-
-}
 
 .characteristics_wrapper {
     @include flexbox(row, center, center, center);
     background-color: $third-color;
     padding: 0;
     height: 100vh;
-    
-
 
     margin-top: 40px;
     padding: 20px;
@@ -115,24 +102,16 @@
 
 /* contact section */
 .contact_section {
-   /*  @include flexbox(row, center, center, center);
-    height: 80vh;
-    width: 100%;
-    background-color: $grey3; */
 
     @include flexbox(row, center, center, center);
     margin: 0;
     padding: 0;
-    height: 100vh; /* mandatory */  
+    height: 100vh;
+    /* mandatory */
     background-color: $grey3;
 
     .contact_info {
-        /* @include flexbox(column, center, flex-start, center);
-        height: 80%;
-        width: 50%;
-        margin: 0px 20px;
-        padding: 10px;
-        gap: 80px; */
+
         @include flexbox(column, center, flex-start, flex-start);
         margin: 50px 100px 0px 100px;
 
@@ -140,10 +119,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 10px;
-
         }
-
-
     }
 
     .contact_form {
@@ -155,14 +131,44 @@
 }
 
 
+@media screen and (max-width: 1024px) {
 
+    .backSection{
 
-
-
-
-@media screen and (max-width: 768px) {
-    .flex-item {
-        width: calc(100% - 20px);
-
+        display: none;
     }
+
+    .hero_section {
+
+        .signin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                display: visible;
+                @include degradado;
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .contact_section {
+
+        @include flexbox(column, center, center, center);
+        margin: 0;
+        padding: 0;
+        background-color: $grey3;
+
+        .contact_info {
+            display: none;
+        }
+        .contact_form {
+            
+            height: 100px;
+            width: 100%;
+        }
+    }
+
 }

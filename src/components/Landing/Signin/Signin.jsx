@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./signin.module.scss";
+import styles from "./Signin.module.scss";
 import { messages, patterns } from "./validation";
 import google from "../../../assets/icons/google-icon.svg"
 import face from "../../../assets/icons/facebook-icon.svg"
@@ -127,7 +127,7 @@ const Signin = () => {
 
             
             <div className={styles.containerTerminos}>
-                <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span><div className=""></div></p>
+                <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span></p>
 
                
 

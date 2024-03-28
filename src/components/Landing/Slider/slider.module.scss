@@ -102,3 +102,15 @@
     /* background-color: $slider-control-active-color; */
     background-color: $primary-color;
 }
+
+
+@media screen and (max-width: 600px) {
+    .textContainer{
+        h2{
+            font-size: 1.563rem;
+        }
+        .pp{
+            display: none;
+        }
+    }
+}
