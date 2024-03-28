@@ -65,12 +65,8 @@ const Landing = () => {
             {/* hero section */}
             <section className={`${styles.hero_section} ${showMenu ? styles.hide : ''}`}>
                 
-          
             <TextHero />
                 
-
-                
-
                 <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
                     <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
                     
