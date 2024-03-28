@@ -85,7 +85,7 @@ const Landing = () => {
 
 
             {/* characteristics section slider */}
-            <div className={styles.characteristics_section}>
+            <div id="characteristics" className={styles.characteristics_section}>
                 <Slider />
             </div>
 
@@ -94,7 +94,7 @@ const Landing = () => {
             </div>
 
             {/* contact section */}
-            <section className={styles.contact_section}>
+            <section id='contact' className={styles.contact_section}>
 
                 <div className={styles.contact_info}>
                     <h2>Contacto</h2>

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom"; 
 import styles from "./Signin.module.scss";
 import { messages, patterns } from "./validation";
 import google from "../../../assets/icons/google-icon.svg"
 import face from "../../../assets/icons/facebook-icon.svg"
 
 const Signin = () => {
+    const navigate = useNavigate(); // Inicializar useHistory
     const {
         register,
         handleSubmit,
@@ -15,7 +17,10 @@ const Signin = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     const onSubmit = (userInfo) => {
+        
         console.log(userInfo);
+        
+        navigate("/admin");
     };
 
     const handleTogglePassword = () => {
@@ -24,7 +29,7 @@ const Signin = () => {
 
     return (
         <div className={styles.wrapper}>
-
+ 
             <h3>Registrate</h3>
             <p>Se parte de nuestra comunidad</p>
 
@@ -35,14 +40,14 @@ const Signin = () => {
                     <input
                         {...register("phone", {
                             required: messages.req,
-                            minLength: {
+                            /* minLength: {
                                 value: 9,
                                 message: messages.lengthPhone
                             },
                             maxLength: {
                                 value: 9,
                                 message: messages.lengthPhone
-                            },
+                            }, */
                             pattern: {
                                 value: patterns.phone,
                                 message: messages.phone
