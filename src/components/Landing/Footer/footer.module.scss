@@ -22,17 +22,19 @@
     a {
         display: inline-block;
         margin-bottom: 20px;
-        
+
         text-decoration: none;
     }
 
-    .a, p {
+    .a,
+    p {
 
         margin-top: 0;
     }
 
-    a:hover{
-color: $primary-color    }
+    a:hover {
+        color: $primary-color
+    }
 }
 
 .footerRedesContainer {
@@ -52,10 +54,21 @@ color: $primary-color    }
         border-radius: 5px;
         padding: 2px;
         width: 35px;
-        transition: transform 0.3s ease; 
+        transition: transform 0.3s ease;
     }
 
-    img:hover{
-        transform: scale(1.2); 
-    } 
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .footerMenuContainer {
+        @include flexbox(row, center, center, flex-start);
+    }
+
+    .ul {
+        display: none;
+    }
 }

@@ -53,7 +53,7 @@ const Landing = () => {
 
     return (
         <>
-            <NavBar onMenuToggle={handleMenuToggle} showMenu={showMenu}/>
+            <NavBar onMenuToggle={handleMenuToggle} showMenu={showMenu} />
 
             <section className={styles.backSection}>
                 <img className={styles.circle} src={circles} alt="circles" ref={circlesRef} />
@@ -64,14 +64,20 @@ const Landing = () => {
 
             {/* hero section */}
             <section className={`${styles.hero_section} ${showMenu ? styles.hide : ''}`}>
-                
-            <TextHero />
-                
-                <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
+
+                <TextHero />
+
+                {/* <div className={` ${styles.signin}${isMenuOpen ? styles.hide : ''}`}>
+                    <h4 className={styles.h4}>¡Convierte tus Conversaciones <br />en Acciones!</h4>
+                    <Signin />
+                </div>  */}
+
+                <div className={styles.signin}>
                     <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
-                    
+
                     <Signin />
                 </div>
+
             </section>
 
 

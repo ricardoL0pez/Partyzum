@@ -12,8 +12,6 @@ const Contact = () => {
         formState: { errors }
     } = useForm();
 
-    const [showPassword, setShowPassword] = useState(false);
-
     const onSubmit = (userInfo) => {
         console.log(userInfo);
     };
