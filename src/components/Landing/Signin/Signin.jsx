@@ -127,7 +127,7 @@ const Signin = () => {
 
             
             <div className={styles.containerTerminos}>
-                <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span><div className=""></div></p>
+                <p >Al registrarte, aceptas nuestros <span className={styles.span}><a href="#">Terminos y Condiciones</a></span> y <span className={styles.span}><a href="#">Políticas de privacidad</a></span></p>
 
                
 
