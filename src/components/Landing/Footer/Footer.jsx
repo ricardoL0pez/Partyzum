@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                 </ul>
             </div>
-
+            <p className={styles.copy}>©2024 Partyzum</p>
         </footer>
     );
 };

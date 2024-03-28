@@ -55,6 +55,7 @@ const Landing = () => {
         <>
             <NavBar onMenuToggle={handleMenuToggle} showMenu={showMenu} />
 
+            {/* back section */}
             <section className={styles.backSection}>
                 <img className={styles.circle} src={circles} alt="circles" ref={circlesRef} />
                 <img className={styles.thunder} src={thunder} alt="thunder" ref={thunderRef} />
@@ -68,22 +69,18 @@ const Landing = () => {
                 <TextHero />
 
                 <div className={styles.signin}>
-                    <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
-
+                    <h6>¡Convierte tus Conversaciones <br />en Acciones!</h6>
                     <SigninForm />
                 </div>
 
             </section>
-
-
-
-
 
             {/* characteristics section slider */}
             <div id="characteristics" className={`${styles.characteristics_section} ${showMenu ? styles.hide : ''}`}>
                 <Slider />
             </div>
 
+            {/* call to action section */}
             <div className={`${styles.callToAction_section} ${showMenu ? styles.hide : ''}`}>
                 <CallToAction />
             </div>

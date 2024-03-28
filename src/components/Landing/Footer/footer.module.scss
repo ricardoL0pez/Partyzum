@@ -2,11 +2,15 @@
 @import '../../../SCSS/abstracts/variables';
 
 .footerWrapper {
-    @include flexbox(row, center, space-around, center);
+    @include flexbox(column, center, space-around, center);
     height: 350px;
     background-color: $secundary-color;
     text-align: left;
-    color: white
+    color: white;
+
+    .copy{
+        color:white;
+    }
 }
 
 .footerMenuContainer {

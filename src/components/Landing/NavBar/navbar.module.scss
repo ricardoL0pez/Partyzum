@@ -113,3 +113,15 @@
     }
 
 }
+
+@media screen and (max-width: 600px) {
+
+    .brand {
+        width: 150px;
+        margin-left: 10px
+    }
+    
+    .menu {
+        margin-right: 10px;
+    }
+}

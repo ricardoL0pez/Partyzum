@@ -5,12 +5,12 @@
 .slider {
     position: relative;
     overflow: hidden;
-    width: 100vw; /* Ocupa el ancho total de la página */
+    width: 100vw;
     @include flexbox(row, center, center, center);
     background-color: $third-color;
-    margin-top: 40px; 
+    margin-top: 40px;
     margin-bottom: 40px;
-    
+
 }
 
 .slides {
@@ -23,14 +23,15 @@
 
 .characteristics_wrapper {
     @include flexbox(row, center, center, center);
-    width: 80vw;  
-    height: 100vh; 
-    
-    
+    width: 80vw;
+    height: 100vh;
 
-    .textContainer, .video {
+
+
+    .textContainer,
+    .video {
         @include flexbox(column, center, space-evenly, flex-start);
-        width: 50%; 
+        width: 50%;
     }
 
     .p {
@@ -56,7 +57,8 @@
 }
  */
 
- .prevButton, .nextButton {
+.prevButton,
+.nextButton {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -79,7 +81,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    margin-bottom: 40px   
+    margin-bottom: 40px
 }
 
 .slideControl {
@@ -93,7 +95,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-       /*  background-color: $slider-control-hover-color; */
+        /*  background-color: $slider-control-hover-color; */
         background-color: $grey2;
     }
 }
@@ -105,11 +107,20 @@
 
 
 @media screen and (max-width: 600px) {
-    .textContainer{
-        h2{
+    .slider {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .characteristics_wrapper {
+        height: 80vh;}
+
+    .textContainer {
+        h2 {
             font-size: 1.563rem;
         }
-        .pp{
+
+        .pp {
             display: none;
         }
     }

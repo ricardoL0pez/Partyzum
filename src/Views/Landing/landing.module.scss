@@ -68,7 +68,7 @@
     height: 100%;
     /* mandatory */
 
-    h4 {
+    h6 {
         display: none;
     }
 }
@@ -144,7 +144,7 @@
             flex-direction: column;
             align-items: center;
 
-            h4 {
+            h6 {
                 display: block;
                 @include degradado;
                 margin-top: 20px;

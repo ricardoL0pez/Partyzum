@@ -12,7 +12,9 @@
         width: 80%;
         object-fit: cover;
         pointer-events: none;
-        
+    }
+    .chatphone{
+        display: none;
     }
 
     p{
@@ -36,12 +38,21 @@
 @media screen and (max-width: 600px) {
     .wrapper {
 
+        .chat{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
         h2{
             font-size: 1.563rem;
         }
         p {
             @include p-regular(regular);
             width: 80%;
+        }
+        .chatphone{
+            display:block;
         }
     }
        
