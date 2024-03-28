@@ -1,7 +1,9 @@
+import './App.scss'
 import { Route, Routes } from 'react-router-dom';
 import { Chat } from './components/Chat/Chat';
-import './App.scss'
-import Landing from './Views/Landing/Landing'
+import Landing from './Views/Landing/Landing';
+import DashBoardAdmin from './Views/DashBoardAdmin/DashBoardAdmin';
+
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing/>} />
         <Route path='/chat' element={<Chat/>} />
+        <Route path='/admin' element={<DashBoardAdmin/>} />
       </Routes>
     </div>
   )

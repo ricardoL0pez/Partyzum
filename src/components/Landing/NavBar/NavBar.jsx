@@ -11,6 +11,9 @@ const NavBar = ({ onMenuToggle }) => {
         setShowMenu(!showMenu);
         onMenuToggle(!showMenu); // Pasar el estado del menú al componente padre
     }
+
+
+
     return (
         <header className={styles.wrapper}>
 
@@ -22,8 +25,8 @@ const NavBar = ({ onMenuToggle }) => {
 
                 <nav className={`${styles.nav} ${showMenu ? styles.navResponsive : ''}`}>
 
-                    <a href="/#">¿Cómo funciona?</a>
-                    <a href="/#">Contacto</a>
+                    <a href="/#characteristics">¿Cómo funciona?</a>
+                    <a href="/#contact">Contacto</a>
                     <button className={styles.signInBtn}>Inicia sesión</button>
 
                     <button className={styles.faTimes} onClick={handleClick}>
