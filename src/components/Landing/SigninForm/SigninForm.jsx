@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom"; 
-import styles from "./signin.module.scss";
-import { messages, patterns } from "../SigninForm/validation";
+import styles from "./signinForm.module.scss";
+import { messages, patterns } from "./validation";
 import google from "../../../assets/icons/google-icon.svg"
 import face from "../../../assets/icons/facebook-icon.svg"
 

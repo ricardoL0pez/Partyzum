@@ -4,7 +4,7 @@ import styles from './landing.module.scss';
 import { HiOutlineMail, HiOutlineMailOpen, HiOutlinePhone, HiPhone } from "react-icons/hi";
 import NavBar from "../../components/Landing/NavBar/NavBar";
 import TextHero from '../../components/Landing/TextHero/TextHero';
-import Signin from "../../components/Landing/Signin/Signin";
+import SigninForm from "../../components/Landing/SigninForm/SigninForm";
 import Slider from '../../components/Landing/Slider/Slider';
 import CallToAction from '../../components/Landing/CTA/CallToAction';
 import Contact from '../../components/Landing/Contact/Contact';
@@ -75,7 +75,7 @@ const Landing = () => {
                 <div className={styles.signin}>
                     <h4>¡Convierte tus Conversaciones <br />en Acciones!</h4>
 
-                    <Signin />
+                    <SigninForm />
                 </div>
 
             </section>
